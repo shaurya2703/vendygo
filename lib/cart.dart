@@ -14,7 +14,6 @@ class _CartState extends State<Cart> {
         ),
         body: Center(
           child: Text('Cart'),
-        )
-        );
+        ));
   }
 }

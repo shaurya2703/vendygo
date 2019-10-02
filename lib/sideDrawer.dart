@@ -17,36 +17,36 @@ class SideDraw extends StatelessWidget {
             leading: CircleAvatar(
               backgroundColor: Colors.blueGrey,
               child: Icon(
-                Icons.notifications,
-                color: Colors.white,
-                size: 20.0,
-              ),
-            ),
-            title: Text('One'),
-            onTap: (){},
-          ),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Colors.blueGrey,
-              child: Icon(
-                Icons.history,
-                color: Colors.white,
-                size: 20.0,
-              ),
-            ),
-            title: Text('Two'),
-            onTap: (){},
-          ),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Colors.blueGrey,
-              child: Icon(
                 Icons.home,
                 color: Colors.white,
                 size: 20.0,
               ),
             ),
-            title: Text('Three'),
+            title: Text('Home Page'),
+            onTap: (){},
+          ),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.blueGrey,
+              child: Icon(
+                Icons.shopping_basket,
+                color: Colors.white,
+                size: 20.0,
+              ),
+            ),
+            title: Text('My Orders'),
+            onTap: (){},
+          ),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.blueGrey,
+              child: Icon(
+                Icons.favorite,
+                color: Colors.white,
+                size: 20.0,
+              ),
+            ),
+            title: Text('Favourites'),
             onTap: (){},
           ),
           ListTile(

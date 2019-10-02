@@ -35,7 +35,12 @@ class _MainPageState extends State<MainPage> {
               IconButton(
                 icon: Icon(Icons.shopping_cart, color: Colors.white),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Cart(),),);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => Cart(),
+                    ),
+                  );
                 },
               ),
               new CircleAvatar(
@@ -43,8 +48,7 @@ class _MainPageState extends State<MainPage> {
                 backgroundColor: Colors.red,
                 child: Text(
                   '0',
-                  style: TextStyle(color: Colors.white , fontSize: 10.0) ,
-                  
+                  style: TextStyle(color: Colors.white, fontSize: 10.0),
                 ),
               )
             ],
