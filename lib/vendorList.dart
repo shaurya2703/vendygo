@@ -14,7 +14,7 @@ class VendorList extends StatefulWidget {
 class _VendorListState extends State<VendorList> {
   Future<List<Vendor>> _getVendor() async {
     var data = await http
-        .get("http://www.json-generator.com/api/json/get/cfnRpjoNBu?indent=3");
+        .get("http://www.json-generator.com/api/json/get/cpHOinbBcO?indent=2");
 
     var jsonData = json.decode(data.body);
     List<Vendor> vendors = [];
@@ -40,29 +40,37 @@ class _VendorListState extends State<VendorList> {
               ),
             );
           } else {
-            return Expanded(
-                child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              itemCount: snapshot.data.length,
-              itemBuilder: (BuildContext context, int index) {
-                return ListTile(
-                  title: Text(snapshot.data[index].name),
-                  subtitle: Text(snapshot.data[index].email),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                VendorPage(snapshot.data[index])));
-                  },
-                );
-              },
-            ));
+            return Column(
+              children: <Widget>[
+                Expanded(
+                    flex: 5,
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      itemCount: snapshot.data.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          leading: CircleAvatar(
+                            backgroundImage: NetworkImage(snapshot.data[index].picture),
+                            // backgroundColor: Colors.blueAccent,
+                          ),
+                          title: Text(snapshot.data[index].name),
+                          subtitle: Text(snapshot.data[index].email),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        VendorPage(snapshot.data[index])));
+                          },
+                        );
+                      },
+                    ))
+              ],
+            );
           }
         },
       ),
     );
   }
 }
-

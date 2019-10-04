@@ -73,6 +73,9 @@ class _HomePageState extends State<HomePage> {
             new Text('Categories'),
             HorizontalList(),
             Divider(),
+            //  new Padding(
+            //   padding: EdgeInsets.all(9.0),
+            // ),
             VendorList()
           ],
         ),
