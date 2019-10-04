@@ -10,7 +10,12 @@ class _CartState extends State<Cart> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: new AppBar(
-          title: Text('Cart'),
+          title: Text(
+            'Your Shopping Basket',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+          ),
+        
         ),
         body: Center(
           child: Text('Cart'),
