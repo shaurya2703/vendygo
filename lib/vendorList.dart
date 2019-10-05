@@ -22,7 +22,7 @@ class _VendorListState extends State<VendorList> {
           Vendor(u["index"], u["about"], u["name"], u["email"], u["picture"]);
       vendors.add(vendor);
     }
-    print(vendors.length);
+    // print(vendors.length);
     return vendors;
   }
 

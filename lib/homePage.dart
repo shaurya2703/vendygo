@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
         child: Carousel(
           boxFit: BoxFit.cover,
           images: [
-            AssetImage('assets/fruits.jpg'),
+            AssetImage('assets/fruits.jpg',),
             AssetImage('assets/frutas.jpg'),
             AssetImage('assets/indian-street-vendor.jpg')
           ],
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       Text(
         'VendyGo',
         style: TextStyle(
-            color: Colors.white, fontSize: 50.0, fontStyle: FontStyle.italic),
+            color: Colors.white, fontSize: 50.0, fontStyle: FontStyle.italic,),
       )
     ],
   );
