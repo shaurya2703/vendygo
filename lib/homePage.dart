@@ -4,6 +4,7 @@ import 'package:vendygo/vendorList.dart';
 // import 'package:vendygo/vendorListPage.dart';
 import './components/horizontalListView.dart';
 import './sideDrawer.dart';
+import './cart.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                 icon: Icon(Icons.shopping_cart, color: Colors.white),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/cart');
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>Cart()));
                 },
               ),
               new CircleAvatar(

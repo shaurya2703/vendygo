@@ -22,7 +22,7 @@ class _VendorListState extends State<VendorList> {
           Vendor(u["index"], u["about"], u["name"], u["email"], u["picture"]);
       vendors.add(vendor);
     }
-    // print(vendors.length);
+    print(vendors.length);
     return vendors;
   }
 
@@ -53,8 +53,9 @@ class _VendorListState extends State<VendorList> {
                         return Card(
                           child: ListTile(
                             leading: CircleAvatar(
-                                child:
-                                    Image.network(snapshot.data[index].picture, scale: 10.0,)
+                                backgroundImage:
+                                    NetworkImage('https://picsum.photos/id/237/200/300.jpg')
+                                // backgroundColor: Colors.blueAccent,
                                 ),
                             title: Text(snapshot.data[index].name),
                             subtitle: Text(snapshot.data[index].email),
