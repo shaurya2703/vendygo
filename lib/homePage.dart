@@ -5,29 +5,37 @@ import 'package:vendygo/vendorList.dart';
 import './components/horizontalListView.dart';
 import './sideDrawer.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-
-  Widget imageCarousel = new Container(
-    height: 200.0,
-    child: Carousel(
-      boxFit: BoxFit.cover,
-      images: [
-        AssetImage('assets/fruits.jpg'),
-        AssetImage('assets/frutas.jpg'),
-        AssetImage('assets/indian-street-vendor.jpg')
-      ],
-      autoplay: true,
-      animationCurve: Curves.fastOutSlowIn,
-      autoplayDuration: Duration(milliseconds: 2500),
-      dotSize: 2.0,
-      indicatorBgPadding: 0.0,
-    ),
+  Widget imageCarousel = new Stack(
+    alignment: Alignment.center,
+    children: <Widget>[
+      Container(
+        height: 200.0,
+        child: Carousel(
+          boxFit: BoxFit.cover,
+          images: [
+            AssetImage('assets/fruits.jpg'),
+            AssetImage('assets/frutas.jpg'),
+            AssetImage('assets/indian-street-vendor.jpg')
+          ],
+          autoplay: true,
+          animationCurve: Curves.fastOutSlowIn,
+          autoplayDuration: Duration(milliseconds: 2500),
+          dotSize: 2.0,
+          indicatorBgPadding: 0.0,
+        ),
+      ),
+      Text(
+        'VendyGo',
+        style: TextStyle(
+            color: Colors.white, fontSize: 50.0, fontStyle: FontStyle.italic),
+      )
+    ],
   );
 
   @override
@@ -71,6 +79,9 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(9.0),
             ),
             new Text('Categories'),
+            new Padding(
+              padding: EdgeInsets.all(9.0),
+            ),
             HorizontalList(),
             Divider(),
             //  new Padding(

@@ -8,4 +8,5 @@ class Vendor {
   final String picture;
 
   Vendor(this.index, this.about, this.name, this.email, this.picture);
+  
 }
