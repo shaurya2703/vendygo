@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:vendygo/sideDrawer.dart';
+// import 'package:vendygo/sideDrawer.dart';
 // import './vendorPage.dart';
 import './models/vendor.dart';
 import './models/vendorItems.dart';

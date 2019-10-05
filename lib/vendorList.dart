@@ -53,9 +53,8 @@ class _VendorListState extends State<VendorList> {
                         return Card(
                           child: ListTile(
                             leading: CircleAvatar(
-                                backgroundImage:
-                                    NetworkImage(snapshot.data[index].picture)
-                                // backgroundColor: Colors.blueAccent,
+                                child:
+                                    Image.network(snapshot.data[index].picture, scale: 10.0,)
                                 ),
                             title: Text(snapshot.data[index].name),
                             subtitle: Text(snapshot.data[index].email),
