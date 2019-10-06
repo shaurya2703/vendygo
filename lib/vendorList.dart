@@ -13,7 +13,7 @@ class VendorList extends StatefulWidget {
 class _VendorListState extends State<VendorList> {
   Future<List<Vendor>> _getVendor() async {
     var data = await http
-        .get("http://www.json-generator.com/api/json/get/cejzrwArWW?indent=2");
+        .get("http://www.json-generator.com/api/json/get/cfKqXtkode?indent=2");
 
     var jsonData = json.decode(data.body);
     List<Vendor> vendors = [];
@@ -36,7 +36,7 @@ class _VendorListState extends State<VendorList> {
           if (snapshot.data == null) {
             return Container(
               child: Center(
-                child: Text('Loading...'),
+                child: CircularProgressIndicator()
               ),
             );
           } else {
@@ -54,7 +54,7 @@ class _VendorListState extends State<VendorList> {
                           child: ListTile(
                             leading: CircleAvatar(
                                 backgroundImage:
-                                    NetworkImage('https://picsum.photos/id/237/200/300.jpg')
+                                    NetworkImage(snapshot.data[index].picture)
                                 // backgroundColor: Colors.blueAccent,
                                 ),
                             title: Text(snapshot.data[index].name),

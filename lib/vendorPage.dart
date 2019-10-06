@@ -53,14 +53,14 @@ class _VendorPageState extends State<VendorPage> {
             FutureBuilder(
               future: _getVendorItems(_vendor),
               builder: (BuildContext context, AsyncSnapshot snapshot){
-                if (snapshot.data == null){
+                if (snapshot.hasError){
                   return Container(
                     child: Center(
-                      child: Text('Loading....'),
+                      child: Text("${snapshot.error}"),
                     ),
                   );
                 }
-                else {
+                else if(snapshot.hasData) {
                   return ListView.builder(
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
@@ -75,6 +75,7 @@ class _VendorPageState extends State<VendorPage> {
                     },
                   );
                 }
+                return CircularProgressIndicator();
               },
             )
           ],
