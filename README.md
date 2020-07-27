@@ -1,6 +1,8 @@
 # vendygo
 
-A new Flutter project.
+A Flutter based shopping app where you can buy fruits and vegetables directly from street vendors. All the products will be delivered at your doorstep
+
+Still under development
 
 ## Getting Started
 
